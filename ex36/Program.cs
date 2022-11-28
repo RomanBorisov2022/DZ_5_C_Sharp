@@ -47,7 +47,7 @@ int UserInput(string message, string errorMessage)
         Console.WriteLine(errorMessage);
     }
 }
-//_______ПРосим пользователя ввести минимальный элемент в массиве______//
+//_______ПРосим пользователя ввести минимальный элемент______//
 
 int UserInput1(string message, string errorMessage)
 {
@@ -61,7 +61,7 @@ int UserInput1(string message, string errorMessage)
         Console.WriteLine(errorMessage);
     }
 }
-//_______ПРосим пользователя ввести максимальный элемент в массиве_____//
+//_______ПРосим пользователя ввести максимальный элемент_____//
 
 int UserInput2(string message, string errorMessage)
 {
