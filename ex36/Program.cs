@@ -6,8 +6,8 @@
 Console.Clear();
 
 int userInput = UserInput("Введите число элементов будущего массива: ", "Ошибка ввода!");
-int userInput1 = UserInput1("Введите минимальное число в будущем массиве: ", "Ошибка ввода!");
-int userInput2 = UserInput2("Введите максимальное число в будущем массиве: ", "Ошибка ввода!");	
+int userInput1 = UserInput("Введите минимальное число в будущем массиве: ", "Ошибка ввода!");
+int userInput2 = UserInput("Введите максимальное число в будущем массиве: ", "Ошибка ввода!");	
 int[] array = GetArray(userInput, userInput1, userInput2);
 int sum = GetSum(array);
 Console.Write("Массив: ");
@@ -34,6 +34,7 @@ int[] GetArray(int userInput, int minValue, int maxValue)
     return res;
 }
 //________Просим пользователя о том, сколько элементов будет в массиве______//
+//__а так же эта функция будет запрашивать минимальный и максимальный элемент в массиве___//
 
 int UserInput(string message, string errorMessage)
 {
@@ -43,34 +44,6 @@ int UserInput(string message, string errorMessage)
 
         if(int.TryParse(Console.ReadLine(), out int userInput))
             return userInput;
-
-        Console.WriteLine(errorMessage);
-    }
-}
-//_______ПРосим пользователя ввести минимальный элемент______//
-
-int UserInput1(string message, string errorMessage)
-{
-    while(true)
-    {
-        Console.Write(message);
-
-        if(int.TryParse(Console.ReadLine(), out int userInput1))
-            return userInput1;
-
-        Console.WriteLine(errorMessage);
-    }
-}
-//_______ПРосим пользователя ввести максимальный элемент_____//
-
-int UserInput2(string message, string errorMessage)
-{
-    while(true)
-    {
-        Console.Write(message);
-
-        if(int.TryParse(Console.ReadLine(), out int userInput2))
-            return userInput2;
 
         Console.WriteLine(errorMessage);
     }
